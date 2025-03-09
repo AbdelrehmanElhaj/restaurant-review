@@ -1,4 +1,4 @@
-package dev.hdr.restaurant_review.domain.repositories;
+package dev.hdr.restaurant_review.repositories;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
