@@ -1,7 +1,5 @@
 package dev.hdr.restaurant_review.services.impl;
 
-import dev.hdr.restaurant_review.exceptions.StorageException;
-import dev.hdr.restaurant_review.services.StorageService;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,6 +8,9 @@ import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
+
+import dev.hdr.restaurant_review.exceptions.StorageException;
+import dev.hdr.restaurant_review.services.StorageService;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -71,7 +72,7 @@ public class FileSystemStorageService implements StorageService {
     }
 
     @Override
-    public Optional<Resource> loadResource(String filename) {
+    public Optional<Resource> loadAsResource(String filename) {
         try {
             Path file = rootLocation.resolve(filename);
 

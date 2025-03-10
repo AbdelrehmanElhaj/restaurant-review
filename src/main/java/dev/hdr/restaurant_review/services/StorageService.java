@@ -1,15 +1,11 @@
 package dev.hdr.restaurant_review.services;
 
-import java.util.Optional;
-
+import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.nimbusds.jose.util.Resource;
+import java.util.Optional;
 
 public interface StorageService {
-
     String store(MultipartFile file, String filename);
-
-    Optional<Resource> loadResource(String filename);
-
+    Optional<Resource> loadAsResource(String id);
 }
